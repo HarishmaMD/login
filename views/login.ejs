@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+
+    <header>
+       
+        <div class="row mt-5">
+            <div class="col-md-3">
+               
+            </div>
+          
+            <div class="col-md-6 m-auto border">
+                <div class="container mt-5 pl-5">
+                    <h1 class="text-center">Login Page</h1>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="pills-login" role="tabpanel"
+                            aria-labelledby="tab-login">
+                            <form action="/login" method="post">
+                                <div class="row">
+                                    <% if (messages.error){%>
+                                        <div class="alert alert-danger">
+                                            <strong> <%= messages.error %> </strong>
+                                        </div>
+                                    <% } %>
+                                </div>
+                                <!-- Email input -->
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="loginName">Email</label>
+                                    <input type="email" id="loginName" class="form-control" name="email" placeholder="Enter your mail"  />
+
+                                </div>
+
+                                <!-- Password input -->
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="loginPassword">Password</label>
+                                    <input type="password" id="loginPassword" class="form-control" name="password" placeholder="Enter your password"  />
+
+                                </div>
+                                <!-- Submit button -->
+                                <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+                                <!-- Register buttons -->
+                                <div class="text-center">
+                                  
+                                    <p>Not a member? <a href="/register">Register</a></p></form>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+        
+            </div>
+       
+    </header>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>
+
+
